@@ -2,7 +2,7 @@
 title: "Hybrid App Base & Template"
 category: "Mobile"
 menu_order: 30
-toc-level: 1
+toc-level: 2
 description: "Mendix Hybrid App Base & Hybrid App Template release notes."
 ---
 
