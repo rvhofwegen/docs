@@ -2,13 +2,14 @@
 title: "Package Native Apps Using Native Builder"
 parent: "native-mobile"
 menu_order: 71
-description: A how-to for packaging your iOS and Android apps.
+description: Describes how to package your Mendix apps for iOS and Android.
 tags: ["GitHub", "App Center", "Android", "native", "iOS", "Packaging", "Mobile"]
 ---
 
 ## 1 Introduction
 
-The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. 
+The Native Builder takes your Mendix project containing a native profile and packages a native app for iOS and Android. The Native Builder uses [MxBuild](https://docs.mendix.com/refguide/mxbuild), [GitHub](https://github.com/), and [App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below).
+
 
 ## 2 Prerequisites
 
@@ -22,7 +23,7 @@ The Native Builder takes your Mendix project containing a native profile and pac
 
 ## 3 About the Native Builder
 
-The Native Builder uses MxBuild, GitHub, and App Center to build your applications. The tool automates the configuration of these processes to streamline your app building experience. The Native builder allows you to create as many apps on GitHub as possible, as long as they are given unique app names using the `--project-name` parameter (for more information, see the [Commands](#commands) section below). Using the `prepare` and `build` command combination, the Native Builder packages your apps by doing the following:
+When you run it and use the `prepare` and `build` commands, the Native Builder packages your apps by doing the following:
 
 1. Deploys your Mendix project locally.
 2. Creates a new repository using the Mendix native template repository on GitHub named after the app name provided.
