@@ -236,6 +236,7 @@ Depending on the data volume (100,000 items or more) and app usage, the function
 
 Additionally, for data volume of millions of items, placing more specific XPath steps first can mean less overall work for the database.
 By "specific" we mean how many association steps are involved. For example, an XPath part that uses an association is more specific than an XPath part that directly accesses an attribute.
+///An association might be more specific. But evaluation of a path has more impact then a attribute. So in case of having an attribute constraint first, minimizing the data set of one table with 70% and a constraint over a path minimizing the data set of one table to 1%, I would still put the attribute constraint first. As it will directly minimize the dataset to 30% which will be evaluated against the path constraint instead of evaluating 100% of the data set against this path constraint. The assumption of attribute constraint is less specific and should thus be put as second constraint after the more specific path constraint is a very wrong one. This example should be removed and replaced by specic/less specific in general. Plus the recommendation on evaluating paths after minimizing data directly on a attribute, unless the attribute doesn't minimize the dataset by a fair % ///
 
 #### Steps to Fix
 
