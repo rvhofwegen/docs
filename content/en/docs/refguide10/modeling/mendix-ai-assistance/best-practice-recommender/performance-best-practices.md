@@ -110,9 +110,10 @@ You can identify convertible microflows using the following criteria:
 * Microflows that have one or more of the following categories:
     * Microflow has logic meant for offline applications.
     * Microflow has logic for online applications but does not involve any database related actions like a committing **Create object**, **Commit**, **Retrieve**, and **Rollback** activities. 
+    ///Create action w/o commit is NOT a best practice to do in a Nanoflow, it should always be executed on the application server by a microflow. And users should NEVER have create rights at entity level. Arbitraty exeption could be the god-mode administrator. This should be removed from this documentation AND the best practice recommender in Studio Pro. Each microflow execution a Create action, should **NOT** be adviced to be converted as nanoflow.///
     * Microflow has at-most one database related action. (Not the best practice)
 * Microflows that contain nanoflow-compatible activities. For information on activities supported by nanoflows, see [Activities](/refguide10/activities/). 
-* Microflow expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
+* Expressions do not contain the following variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`. These variables are not supported by nanoflows.
 * As nanoflows are executed in the context of the current user, ensure that the microflow has only operations for which the current user is authorized. Otherwise the converted nanoflow will fail.
 
 {{% alert color="info" %}}
